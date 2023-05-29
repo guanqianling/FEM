@@ -1,7 +1,7 @@
 function z = FEM_1d_linear_Poisson(n)
 
 if nargin < 1
-    n = 16;
+    n = 32;
 end
 
 %% pre_setting 
