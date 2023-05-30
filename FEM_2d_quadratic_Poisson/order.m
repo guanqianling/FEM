@@ -1,6 +1,6 @@
 function res = order
 
-N = 6;
+N = 8;
 n = 2 .^ ((1:N) + 1);
 
 err = zeros(N, 3);
