@@ -1,4 +1,4 @@
-function [p1, s1, t1]=uniform_mesh(n,left,right,draw)
+function [p, s, t]=uniform_mesh(n,left,right,draw)
 
 if nargin<4
     draw=0;
@@ -12,17 +12,13 @@ if nargin<1
 end
 
 h=(right-left)/n;
-p=zeros(3,(n+1)^2);
+p=zeros(2,(n+1)^2);
 t=zeros(3,2*n^2);
 for i=1:n+1
     for j=1:n+1
         m=tr(i,j,n);
         p(1,m)=right-(j-1)*h;
         p(2,m)=left+(i-1)*h;
-        p(3,m)=0;
-        if (i-1)*(j-1)*(i-n-1)*(j-n-1)==0
-            p(3,m)=1;
-        end
     end
 end
 for i=1:n
@@ -42,17 +38,10 @@ for i=1:n
 end
 s=sort_edge(e,t);
 
-for i=1:size(s,2)
-    if s(4,i)==0
-        if p(1,s(1,i))+p(1,s(2,i))==0
-            s(4,i)=-2;
-        elseif p(1,s(1,i))+p(1,s(2,i))==2
-            s(4,i)=-3;
-        else
-            s(4,i)=-1;
-        end
-    end
-end
+bound_idx=find(s(4,:)==0);
+s(4,bound_idx)=-1;
+s(4,bound_idx(p(1,s(1,bound_idx))+p(1,s(2,bound_idx))==0))=-2;
+s(4,bound_idx(p(1,s(1,bound_idx))+p(1,s(2,bound_idx))==2))=-3;
 
 if draw==1
     hold on
@@ -74,10 +63,6 @@ if draw==1
     end
     hold off
 end
-
-p1=p(1:2,:);
-s1=s;
-t1=t;
 
 function m=tr(i,j,n)
 if i+j<n+3
