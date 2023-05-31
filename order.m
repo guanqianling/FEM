@@ -23,7 +23,7 @@ res = [err(:, 1) [0; err_order(:, 1)] err(:, 2) [0; err_order(:, 2)] ...
        err(:, 3) [0; err_order(:, 3)]];
 
 errorder.data = res;
-errorder.tableColLabels = {'$\|e\|_0$','order','$\|e\|_\infty$','order','$|e|_1$','order'};
+errorder.tableColLabels = {'$\|e_h\|_0$','order','$\|e_h\|_\infty$','order','$|e_h|_1$','order'};
 errorder.tableRowLabels = {'1/2','1/4','1/8','1/16','1/32','1/64','1/128','1/256'};
 errorder.dataFormat = {'%.4e',1,'%.4f',1,'%.4e',1,'%.4f',1,'%.4e',1,'%.4f',1};
 latexTable(errorder);
