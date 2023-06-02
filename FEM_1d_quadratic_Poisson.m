@@ -39,9 +39,9 @@ u_pre = [2 * gs1_pt .^ 2 - 3 * gs1_pt + 1;
 diff_pre = [4 * gs1_pt - 3; 4 - 8 * gs1_pt; 4 * gs1_pt - 1] * n;
 
 %% stiffness_matrix
-phy_gs = (repmat(gs1_pt/n, n, 1) + repmat((0:1/n:1 - 1/n)', 1, gs1_n))';
+phy_gs = repmat(gs1_pt/n, n, 1) + repmat((0:1/n:1 - 1/n)', 1, gs1_n);
 
-c_global = repmat(reshape(c(phy_gs), 1, 1, gs1_n, n), 3, 3, 1, 1);
+c_global = repmat(reshape(c(phy_gs)', 1, 1, gs1_n, n), 3, 3, 1, 1);
 
 uv_global = repmat(A_pre, 1, 1, 1, n);
 
