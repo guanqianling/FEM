@@ -9,7 +9,7 @@ function z = FEM_2d_linear_Heat(n, T_end)
 %                           u=g on [0,T]\times \{y=0,1\}
 % 
 %----The input arguments:
-% n is the mesh grid parameter, default = 32
+% n is the mesh grid parameter, default = 16
 % T_end is the final time, default = 1
 %----The output arguments:
 % z(1) is the error corresponding to the L2 norm
@@ -21,7 +21,7 @@ if nargin < 2
     T_end = 1;
 end
 if nargin < 1
-    n = 32;
+    n = 16;
 end
 
 clear global

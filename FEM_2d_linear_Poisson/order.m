@@ -1,7 +1,7 @@
 function res = order
 
-N = 5;
-n = 2 .^ ((1:N) + 2);
+N = 10;
+n = 2 .^ (1:N);
 
 err = zeros(N, 3);
 
