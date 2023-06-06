@@ -33,6 +33,8 @@ If one wants to visualize grid information in 2D problem, please change the vari
 If one wants to visualize numerical solution in 2D problem, please change the varible draw=1 in pre_setting.m.
 If one wants to change the Gauss integration, please change it in pre_setting.m.
 
+There is a complex example in 2-D problem, if one wants to test it, please change it in pre_setting.m.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 @Author: Haoning Dang
