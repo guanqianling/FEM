@@ -28,12 +28,14 @@ The output argument:
 
     z is a 1*3 vector, containing the error in L2 norm, L_infty norm and H1 semi-norm
 
+For Heat equation, the time step \Delta t = 4/h^2 for linear element and \Delta t=8/h^3 for quadratic element. If one wants to change the time step, please change it in partition.m.
+
 In addition, if one wants obtain the errors and orders of convergence for different mesh sizes, please run order.m after taking an appropriate argument.
 If one wants to visualize grid information in 2D problem, please change the variable draw=1 in uniform_mesh.m.
 If one wants to visualize numerical solution in 2D problem, please change the varible draw=1 in pre_setting.m.
 If one wants to change the Gauss integration, please change it in pre_setting.m.
 
-There is a complex example in 2-D problem, if one wants to test it, please change it in pre_setting.m.
+There is a more complex example in 2-D problem, if one wants to test it, please change it in pre_setting.m.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
