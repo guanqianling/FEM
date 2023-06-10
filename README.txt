@@ -40,7 +40,7 @@ If one wants to visualize grid information in 2D problem, please change the vari
 If one wants to visualize numerical solution in 2D problem, please change the varible draw=1 in pre_setting.m.
 If one wants to change the Gauss integration, please change it in pre_setting.m.
 
-There is a more complex example in 2-D problem, if one wants to test it, please change it in pre_setting.m.
+There is a more complex example in 2-D problem, if one wants to test it, please uncomment it in pre_setting.m. What‘s more, one can write a new example, please create a new subroutine and change the corresponding function handle in pre_setting.m, don't have to make changes in each original subroutine.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
