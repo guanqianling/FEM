@@ -72,6 +72,8 @@ Column 1, column 3, column 5 are the errors in L2 norm, L_infty norm and H1 semi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+This code is available at https://github.com/guanqianling/FEM
+
 @Author: Haoning Dang
 @Date: 05/31/2023
 @Email: haoningdang.xjtu@stu.xjtu.edu.cn
